@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chris V — Home</title>
+  <title>Chris V — Movies</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/movies.css">
 </head>
 <body>
   <header class="site-header">
@@ -28,22 +29,18 @@
   </header>
 
   <main class="container">
-    <section class="hero">
-      <h1>Hi, I'm Chris — Computer Science Student at Kent State University.</h1>
-      <h2>Cybersecurity-Focused Computer Scientist | Application Security & Offensive Security</h2>
-      <!--<h3>Concentrating in Cybersecurtiy</h3>-->
-      <p>My name is Chris and I am a junior at Kent State studying Computer Science. I enjoy coding, hiking, camping, working out, drawing, and some design. I post TikToks of my drawings and also have a store where people can buy my artwork. I am an avid tea drinker and enjoy many different types of teas and love trying new ones.</p>
-      <div class="hero-actions">
-        <!--<a class="btn" href="resume.pdf" target="_blank">Resume</a>-->
-        <a class="btn" href="https://www.linkedin.com/in/christopher-vuletich-35b9a6319/">Linked In</a>
-        <a class="btn secondary" href="projects.html">Projects</a>
-        <a class="btn ghost" href="about.html">About Me</a>
+    <section class="movies-hero">
+      <h1>Movie Journal</h1>
+      <p>Movies I’ve watched, rated, and written a few thoughts about.</p>
+
+      <div class="movie-controls">
+        <button onclick="sortMovies('title')">A–Z</button>
+        <button onclick="sortMovies('rating')">Rating</button>
+        <button onclick="sortMovies('favorite')">Favorites</button>
       </div>
-      <figure>
-        <img src="img/portrait.jpg" alt="Chris portrait" class="rounded portrait-img">
-        <figcaption>Welcome! Grab a tea and look around ☕</figcaption>
-      </figure>
     </section>
+
+    <section id="movie-list" class="movie-list"></section>
   </main>
 
   <footer class="site-footer">
@@ -55,5 +52,7 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/movies.js"></script>
 </body>
 </html>
